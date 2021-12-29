@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Merriweather&display=swap')
+
+$contact-font: 'Arimo', sans-serif
+
 * 
   margin: 0
   padding: 0
@@ -8,3 +12,160 @@
 strong 
   font-weight: bold
 
+@mixin school-font 
+  font-size: 20px
+  font-weight: 300
+
+
+body
+  background-color: lightgray
+
+.cv-container
+  margin: 0 auto
+  margin-top: 50px
+  border: solid 1px black
+  width: 50%
+  min-height: 600px
+  background-color: #f5f3f3
+  border-radius: 6px
+  box-shadow: 0 0px 5px 2px #c4c0c0
+
+  .contact
+    text-align: center
+    line-height: 1.5
+    font-family: $contact-font
+
+  .contact > *
+    cursor: pointer
+
+  .contact-input
+    text-align: center
+    margin-top: 5px
+    font-family: $contact-font
+
+    .name-input
+      border: solid 1px black
+      padding: 6px 6px
+      font-size: 1rem
+      font-weight: 600
+    
+    .phone-input, .email-input
+      border: solid 1px black
+      padding: 4px 4px
+      font-size: 16px
+      font-weight: 400
+  .contact-item
+    font-size: 24px
+    display: inline-block
+  
+  .contact-item.name
+    font-weight: 500
+
+  .contact-item.email, .contact-item.phone
+    font-weight: 400
+    font-size: 20px
+
+  .section-title-container
+    padding: 10px 20px
+    position: relative
+
+    .section-title
+      display: inline-block
+      font-size: 25px
+
+    .add-container
+      position: absolute
+      display: flex
+      align-items: center
+      right: 15px
+      top: 10px
+      border: solid 1px black
+      border-radius: 8px
+      padding: 3px 8px
+      font-size: 17px
+      
+    .add-container:hover
+      background-color: lightpink
+      cursor: pointer
+
+  .education-row
+    display: flex
+    justify-content: space-between
+    padding: 10px 20px
+    font-size: 20px  
+
+  .school-name
+    font-size: 20px
+    font-family: $contact-font
+    font-weight: 300
+  
+  .year-row
+    padding: 0px 20px
+    margin-bottom: 10px
+    
+  .year-row > *
+    font-size: 20px
+    font-weight: 300
+
+  .job-row
+    display: flex
+    justify-content: space-between
+    padding: 10px 20px
+    
+
+    .job-item
+      font-family: $contact-font
+      font-size: 20px
+      font-weight: 400
+      cursor: pointer
+
+  .job-description-container
+    padding: 10px 20px 
+    .job-description
+      display: inline-block
+      font-family: $contact-font
+      font-size: 20px
+      font-weight: 400
+      cursor: pointer
+
+  .job-text-area
+    width: 95%
+
+hr
+  margin: 10px 20px 0 20px
+  border: solid 1px #5e5c5c
+
+.job-hr
+  margin: 20px 20px 0 20px 
+
+.plusicon
+  
+  margin-right: 3px
+  color: green
+
+.checkicon
+  margin-left: 5px
+  color: green
+  cursor: pointer
+
+.checkicon-job-description
+  margin-left: 5px
+  color: green
+  cursor: pointer
+  font-size: 20px
+
+.school-years
+  @include school-font
+  font-family: $contact-font
+  cursor: pointer
+
+.schoolname-input
+  padding: 5px
+
+@media (min-width: 900px) and (max-width: 1200px)
+  .cv-container
+    width: 60%
+
+@media (max-width: 900px)
+  .cv-container
+    width: 70%
